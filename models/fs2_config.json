@@ -1,0 +1,33 @@
+{
+  "model": "FastSpeech2",
+  "num_chars": 300,
+  "vocab_size": 300,
+  "hidden_size": 256,
+  "num_encoder_layers": 4,
+  "num_decoder_layers": 4,
+  "num_heads": 2,
+  "ffn_kernel_size": 9,
+  "dropout": 0.1,
+  "pitch_predictor": {
+    "kernel_size": 3,
+    "dropout": 0.1
+  },
+  "energy_predictor": {
+    "kernel_size": 3,
+    "dropout": 0.1
+  },
+  "duration_predictor": {
+    "kernel_size": 3,
+    "dropout": 0.1
+  },
+  "use_postnet": true,
+  "postnet": {
+    "n_conv": 5,
+    "kernel_size": 5,
+    "filters": 512
+  },
+  "max_seq_len": 1000,
+  "sample_rate": 22050,
+  "text_cleaners": ["indic_cleaners"],
+  "language": "hi"
+}
